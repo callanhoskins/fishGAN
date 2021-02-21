@@ -36,16 +36,19 @@ def get_image_names(url):
 
 def download_image(species_name, fam_code): 
     r = requests.get(url_photo + species_name, headers=headers)
-    with open('fish_pics/' + fam_code + '_' + species_name, 'wb') as f: 
+    with open('fish_pics/' + fam_code.zfill(3) + '_' + species_name, 'wb') as f: 
         f.write(r.content)
 
 
 # In[26]:
 
 
-for fam_code in range(5): 
+for fam_code in range(407, MAX_PAGE): 
     fam_code = str(fam_code)
+    print('{}: '.format(fam_code), end='')
     img_names = get_image_names(url_index + fam_code)
-    for name in img_names: 
+    for name in img_names:
         download_image(name, fam_code)
+        print('*', end='')
+    print()
 

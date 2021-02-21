@@ -12,7 +12,6 @@ import cv2
 
 
 files_paths = os.listdir("fish_pics/")
-print(files_paths)
 
 
 # In[27]:
@@ -29,8 +28,12 @@ def crop_img(img):
 
 
 for file in files_paths: 
-    image = cv2.imread('fish_pics/' + file)
-    image = crop_img(image)
-    image = cv2.resize(image, (256, 256))
-    cv2.imwrite('resized_fish_pics/' + file, image)
+    print(file)
+    try:
+        image = cv2.imread('fish_pics/' + file)
+        image = crop_img(image)
+        image = cv2.resize(image, (256, 256))
+        cv2.imwrite('resized_fish_pics/' + file, image)
+    except AttributeError as e: 
+        print(e)
 
