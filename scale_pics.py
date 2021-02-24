@@ -40,8 +40,12 @@ def zero_pad_img(img):
 if __name__ == '__main__':
     for file in files_paths:
         if file <= MAX_FAM and file >= MIN_FAM:
-            image = cv2.imread('fish_pics/' + file)
-            image = zero_pad_img(image)
-            image = cv2.resize(image, (256, 256))
-            cv2.imwrite('resized_fish_pics/' + file, image)
+            print(file)
+            try: 
+                image = cv2.imread('fish_pics/' + file)
+                image = zero_pad_img(image)
+                image = cv2.resize(image, (256, 256))
+                cv2.imwrite('resized_fish_pics/' + file, image)
+            except AttributeError as e: 
+                print(e)
 
