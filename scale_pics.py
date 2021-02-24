@@ -19,13 +19,15 @@ MIN_FAM = '349'
 
 # In[27]:
 
-
+# This function crops the image to be square with its dimensions min(height, width) x min(height, width)
 def crop_img(img): 
     center = (img.shape[0]//2, img.shape[1]//2)
     half_len = min(center[0], center[1])
     img = img[center[0]-half_len:center[0]+half_len, center[1]-half_len:center[1]+half_len]
     return img
 
+# This function zero-pads the image on the top so that it's a square
+# can change the code to zero-pad it on the side
 def zero_pad_img(img):
     height, width, channels = img.shape
     pad_amt = (width - height) // 2
