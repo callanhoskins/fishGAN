@@ -6,11 +6,11 @@ import os
 num_images = 200
 
 loader = ModelLoader(
-    base_dir='~/fishGAN/stylegan2',
+    base_dir='/home/ubuntu/fishGAN/stylegan2',
     name='fish-stylegan2'
 )
 
-save_dir = '~/fishGAN/stylegan2/fish-stylegan2/results/single-images'
+save_dir = '/home/ubuntu/fishGAN/stylegan2/fish-stylegan2/results/single-images'
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 
