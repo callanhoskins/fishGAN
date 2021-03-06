@@ -16,8 +16,10 @@ if not os.path.exists(save_dir):
 
 
 for i in range(num_images):
+    print(i)
     noise = torch.randn(1, 512).cuda()
     styles = loader.noise_to_styles(noise, trunc_psi=0.7)
     images = loader.styles_to_images(styles)
-    save_image(save_dir + '/' + '{:03}'.format(i) + '.jpg')
+    print(images)
+    save_image(images, save_dir + '/' + '{:03}'.format(i) + '.jpg')
 
