@@ -10,7 +10,7 @@ loader = ModelLoader(
     name='fish-stylegan2'
 )
 
-save_dir = '/home/ubuntu/fishGAN/stylegan2/fish-stylegan2/results/single-images'
+save_dir = '/home/ubuntu/fishGAN/stylegan2/results/fish-stylegan2/single-images'
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 
