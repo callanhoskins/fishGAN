@@ -1,6 +1,6 @@
 # fishGAN - StyleGAN2 Applied to Fish
 
-Check out the results at [This Fish Does Not Exist](http://thisfishdoesnotexist.com). 
+Check out my results at [This Fish Does Not Exist](http://thisfishdoesnotexist.com). 
 
 This repo contains files used to scrape 60k images of fish from online and use them to train the StyleGAN neural network to generate images of realistic-looking fish. 
 
