@@ -29,4 +29,16 @@ See the section [Deploying on AWS](https://github.com/lucidrains/stylegan2-pytor
 
 See the best results at [This Fish Does Not Exist](http://thisfishdoesnotexist.com). Below are some more!
 
+### "Lightweight" StyleGAN2 after 150k iterations (128x128)
 
+![Lightweight 128x128](https://github.com/callanhoskins/fishGAN/blob/main/results/55_lightweight_128.png)
+
+### StyleGAN2 after 131k iterations (128x128)
+
+![StyleGAN2 128x128](https://github.com/callanhoskins/fishGAN/blob/main/results/55_stylegan2_128.png)
+
+### StyleGAN2 after 48k iterations (256x256)
+
+![StyleGAN2 256x256](https://github.com/callanhoskins/fishGAN/blob/main/results/55_stylegan2_256.png)
+
+These are the images shown at thisfishdoesnotexist.com. 
