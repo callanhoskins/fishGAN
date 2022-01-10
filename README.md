@@ -1,6 +1,6 @@
 # fishGAN - StyleGAN2 Applied to Fish
 
-Check out my results at [This Fish Does Not Exist](http://thisfishdoesnotexist.com). 
+Check out my results at [This Fish Does Not Exist](http://thisfishdoesnotexist.net). 
 
 This repo contains files used to scrape 60k images of fish from online and use them to train the StyleGAN neural network to generate images of realistic-looking fish. 
 
@@ -41,4 +41,11 @@ See the best results at [This Fish Does Not Exist](http://thisfishdoesnotexist.c
 
 ![StyleGAN2 256x256](https://github.com/callanhoskins/fishGAN/blob/main/results/55_stylegan2_256.png)
 
-These are the images shown at thisfishdoesnotexist.com. 
+These are the images shown at thisfishdoesnotexist.net. 
+
+## Website setup
+
+1. ![Deploy flask app to AWS EC2](https://www.twilio.com/blog/deploy-flask-python-app-aws)
+2. ![Set up a hosted zone for the domain name and create a record pointing to EC2 IPv4](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html)
+3. Create a virtualenv on EC2 instance at `~/fishGAN/venv` and install `flask`. Use command: `virtualenv venv`. 
+4. ![Enable WSGI server on AWS EC2](https://medium.com/innovation-incubator/deploy-a-flask-app-on-aws-ec2-d1d774c275a2). Note: instead of `sudo apt-get install libapache2-mod-wsgi`, use `sudo apt-get install libapache2-mod-wsgi-py3`. 
